@@ -1,0 +1,18 @@
+{
+  "id": "/",
+  "name": "KODUS — учебная группа",
+  "short_name": "KODUS",
+  "lang": "ru",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#0E1621",
+  "theme_color": "#0E1621",
+  "description": "Закрытый мессенджер учебной группы колледжа",
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "/kodus-icon.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any" },
+    { "src": "/kodus-icon.png", "sizes": "1024x1024", "type": "image/png", "purpose": "maskable" }
+  ]
+}

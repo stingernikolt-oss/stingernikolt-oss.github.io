@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "KODUS",
+    "slug": "kodus",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./public/kodus-icon.png",
+    "scheme": "onspaceapp",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": { "supportsTablet": true },
+    "android": {
+      "adaptiveIcon": { "foregroundImage": "./public/kodus-icon.png", "backgroundColor": "#101318" },
+      "edgeToEdgeEnabled": true
+    },
+    "web": { "bundler": "metro", "output": "static", "favicon": "./public/kodus-icon.png" },
+    "plugins": [
+      "expo-router",
+      ["expo-splash-screen", { "image": "./public/kodus-icon.png", "imageWidth": 200, "resizeMode": "contain", "backgroundColor": "#101318" }],
+      "expo-web-browser"
+    ],
+    "experiments": { "typedRoutes": true }
+  }
+}
