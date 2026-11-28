@@ -74,7 +74,11 @@ self.addEventListener('push', event => {
   const show = async () => {
     // Если приложение открыто и видимо — баннер даст GlobalNotifier, пуш не дублируем.
     const clients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
-    if (clients.some(c => c.visibilityState === 'visible')) return;
+    const visible = clients.some(c => c.visibilityState === 'visible');
+    const age = Date.now() - (payload.createdAt ?? 0);
+      if (visible && age < 60000) return;
+
+
     await self.registration.showNotification(payload.title ?? 'KODUS', {
       body: payload.body ?? '',
       icon: payload.icon ?? '/kodus-icon.png',
